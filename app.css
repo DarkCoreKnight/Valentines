@@ -1,0 +1,168 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #c973ad;
+}
+
+body.yes {
+    background-color: #ff8dc7;
+    background-image: url('./05599424bb5a1b7819956d0288559697.gif');
+    background-size: cover;
+}
+
+body.yes .confirm {
+    display: none;
+}
+
+body.yes .dialog {
+    display: block;
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+    background-color: red;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    background-color: red;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 5px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(2);
+    }
+    20% {
+        transform: scale(2.25);
+    }
+    40% {
+        transform: scale(2.5);
+    }
+}
+
+.confirm {
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ca5ca6;
+    box-shadow: 3px 3px 3px #7e3a68;
+    border-radius: 5px;
+}
+
+.confirm_container {
+    padding: 50px;
+}
+
+.confirm_container .title {
+    color: #fff;
+    text-align: center;
+    font-size: 55px;
+}
+
+.confirm_actions {
+    display: flex;
+    column-gap: 10px;
+}
+
+.confirm_actions button {
+    width: 450px; 
+    cursor: pointer;
+    font-size: 33px;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.confirm_actions .btn-yes {
+    background-color: #a3ddcb;
+}
+
+.confirm_actions .btn-no {
+    position: relative;
+    background-color: #e97777;
+}
+
+.dialog {
+    display: none;
+    min-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f261ac;
+    box-shadow: 3px 3px 3px rgb(160, 69, 116);
+    border-radius: 10px;
+    font-size: 55px;
+}
+
+.dialog_container {
+    padding: 15px 5px;
+}
+
+.dialog_container {
+    color: #fff;
+    text-align: center;
+}
+
+.btn-letter {
+    width: 300px; 
+    cursor: pointer;
+    font-size: 22px;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #a3ddcb;
+}
+
+/* Updated CSS */
+.hidden-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 120%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -10%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    pointer-events: none; /* Disable interaction when hidden */
+}
+
+.image-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Updated CSS */
+.btn-up {
+    transform: translateY(-610px);
+}
+
+
